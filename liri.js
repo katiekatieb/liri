@@ -64,7 +64,7 @@ function spotifyThisSong(search){
 //node liri.js concert-this kelly clarkson
 function concertThis(search){
   var queryUrl = "https://rest.bandsintown.com/artists/" + search + "/events?app_id=codingbootcamp";
-  console.log(queryUrl);
+  // console.log(queryUrl);
 
   axios.get(queryUrl).then(function(response){
     // console.log(response.data[0]);
@@ -81,7 +81,7 @@ function concertThis(search){
 };
 
 
-//node liri.js movie-this kelly jaws
+//node liri.js movie-this jaws
 function movieThis(search){
 
   if(search === ""){
@@ -89,7 +89,7 @@ function movieThis(search){
   };
 
   var queryUrl = "http://www.omdbapi.com/?apikey=trilogy&t=" + search;
-  console.log(queryUrl);
+  // console.log(queryUrl);
 
   axios.get(queryUrl).then(function(response){
     // console.log(response.data);
@@ -120,8 +120,8 @@ function doWhatItSays(search){
     var action = array[0];
     var search = array[1].replace(/^"(.*)"$/, '$1');
 
-    console.log(search)
-    console.log(action)
+    // console.log(search)
+    // console.log(action)
 
     switch (action) {
       case "spotify-this-song":
@@ -138,6 +138,6 @@ function doWhatItSays(search){
     };
 
 
-    console.log(array);
+    // console.log(array);
   });
 }
